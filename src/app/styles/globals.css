@@ -1,10 +1,6 @@
 @import "./typography.css";
 @import "./color.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: var(--black);
-}
 
 html,
 body {
@@ -37,4 +33,34 @@ a {
   max-width: 100%;
   margin: 0px;
   padding: 0px 60px;
+}
+
+
+.errorText {
+  margin-top: var(--m-4);
+  color: var(--red);
+  font-size: var(--fs14);
+  font-weight: 400;
+}
+.white{
+  color: var(--white);
+}
+.italic{
+  font-style: italic;
+}
+.maxLine1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.maxLine2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

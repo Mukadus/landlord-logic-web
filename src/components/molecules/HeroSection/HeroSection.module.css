@@ -1,0 +1,99 @@
+.heroSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: var(--g-16);
+}
+
+.heroContent {
+  max-width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-16);
+  position: relative;
+}
+.heroText {
+  padding-top: 59px;
+  text-align: center;
+}
+.heroText::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/before-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 47px;
+  height: 300px;
+  position: absolute;
+  top: 9px;
+  right: 56px;
+}
+.heroText::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/after-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 75px;
+  height: 300px;
+  position: absolute;
+  top: -94px;
+  left: 15px;
+}
+.heroTitle {
+  line-height: var(--lh69);
+  text-align: center;
+  font-family: var(--font-georgia);
+}
+
+.heroDescription {
+  line-height: var(--lh32);
+  text-align: center;
+  color: var(--grey-400);
+  font-family: var(--font-rethink);
+}
+.heroButtons {
+  display: flex;
+  gap: var(--g-16);
+  justify-content: center;
+}
+.heroGetStartedButton,
+.heroButton {
+  border-radius: var(--br-7) !important;
+}
+.heroButton {
+  border: 1px solid var(--grey-200) !important;
+}
+
+.heroImage {
+  height: 438px;
+  width: 250px;
+  position: relative;
+}
+.heroImage img {
+  object-fit: fill;
+}
+.heroImageContainer {
+  display: flex;
+  gap: var(--g-16);
+  justify-content: center;
+}
+.heroImageContainer .heroImage:nth-child(1) img {
+  position: absolute !important;
+  top: 100px !important;
+}
+
+.heroImageContainer .heroImage:nth-child(2) img {
+  position: absolute !important;
+  top: 50px !important;
+}
+
+.heroImageContainer .heroImage:nth-child(3) img {
+  position: absolute !important;
+  top: 30px !important;
+}

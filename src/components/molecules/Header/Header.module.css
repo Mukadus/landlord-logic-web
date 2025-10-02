@@ -3,72 +3,81 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 0.667px solid var(--white-2);
-  background: #ffffffcc;
-  backdrop-filter: blur(6px);
+}
+
+/* Main Header Styles */
+.mainHeader {
+  background: var(--blue-500);
+  padding: var(--p-16) 0;
 }
 
 .headerContent {
-  height: 76px;
-  padding: 16px 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  min-height: 60px;
 }
 
-.logo {
+
+.logoIcon {
+  width: 200px;
+  height: 70px;
   position: relative;
-  width: 123px;
-  height: 45px;
 }
 
+.logoIcon img {
+  object-fit: contain;
+}
+
+/* Navigation Styles */
 .nav {
-  display: none;
+  display: flex;
   align-items: center;
-  gap: 32px;
+  gap: var(--g-24);
 }
 
 .navLink {
-  color: var(--black-1);
-  font-size: 0.875rem;
-  font-weight: 500;
+  color: var(--yellow);
+  font-size: var(--fs15);
+  font-weight: 600;
   text-decoration: none;
+  font-family: var(--font-rethink);
   transition: color 0.2s ease-in-out;
+  position: relative;
+  line-height: var(--lh24);
 }
 
 .navLink:hover {
-  color: var(--purple);
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 6px;
 }
 
+.navLink.active {
+  color: var(--yellow);
+  text-decoration: underline;
+  text-decoration-color: var(--yellow);
+  text-underline-offset: 6px;
+}
+
+/* Action Buttons Styles */
 .actionButtons {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: var(--g-16);
 }
 
-.mobileMenuButton {
-  display: block;
-  color: var(--black-1);
-  background: none;
-  border: none;
-  cursor: pointer;
+.signInLink {
+  color: var(--rgba-green-light);
+  text-decoration: none;
+  font-size: var(--fs13);
+  font-weight: 700;
+  font-family: var(--font-rethink);
   transition: color 0.2s ease-in-out;
 }
 
-.mobileMenuButton:hover,
-.mobileMenuButton:focus {
-  color: var(--purple);
-  outline: none;
+.signInLink:hover {
+  color: var(--grey-200);
 }
 
-@media (min-width: 768px) {
-  .nav {
-    display: flex;
-  }
-}
 
-@media (min-width: 768px) {
-  .mobileMenuButton {
-    display: none;
-  }
-}

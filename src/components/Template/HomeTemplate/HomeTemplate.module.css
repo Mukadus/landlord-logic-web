@@ -1,0 +1,63 @@
+.heroSection {
+  background-color: var(--blue-500);
+  overflow: hidden;
+}
+.sectionOne{
+  padding: var(--p-50) 0;
+}
+.sectionOneContent{
+  display: flex;
+  flex-direction: column;
+  gap: var(--g-16);
+  max-width: 54%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.sectionOneImage{
+  width: 660px;
+  height: 450px;
+  position: relative;
+}
+.sectionOneImage img{
+  object-fit: contain;
+}
+
+.sectionOneImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/before-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 65px;
+  height: 300px;
+  position: absolute;
+  top: 28px;
+  right: 56px;
+}
+.sectionOneImage::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/after-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 109px;
+  height: 300px;
+  position: absolute;
+  top: -94px;
+  left: 38px;
+}
+
+@media (max-width: 1400px) {
+  .sectionOneContent{
+    max-width: 62%;
+  }
+  .sectionOneImage{
+    width: 566px;
+    height: 434px;
+  }
+}

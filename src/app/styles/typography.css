@@ -14,6 +14,7 @@
   --fs40: 40px;
   --fs48: 48px;
   --fs68: 68px;
+  --fs69: 69px;
 
   /* Line heights */
   --lh16: 16px;
@@ -32,6 +33,7 @@
    --g-10: 10px;
    --g-12: 12px;
    --g-16: 16px;
+   --g-20: 20px;
    --g-24: 24px;
  
    /* margin */
@@ -51,13 +53,20 @@
    --p-16: 16px;
    --p-20: 20px;
    --p-24: 24px;
+   --p-28: 28px;
+   --p-32: 32px;
+   --p-40: 40px;
+   --p-41: 41px;
    --p-50: 50px;
+   --p-80: 80px;
 
-   /*  */
+   /* border radius */
+   --br-3: 3px;
    --br-4: 4px;
    --br-7: 7px;
    --br-8: 8px;
    --br-10: 10px;
+   --br-11: 11px;
    --br-12: 12px;
    --br-16: 16px;
    --br-20: 20px;
@@ -156,6 +165,7 @@ span {
   font-size: var(--fs14);
   font-family: var(--font-inter);
   font-weight: 400;
+  margin-bottom: 0;
 }
 
 .pointer {
@@ -167,22 +177,18 @@ span {
 /* Responsive font sizes for different max-widths */
 
 /* For max-width: 1200px */
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   :root {
-    --fs14: 13px;
-    --fs15: 14px;
-    --fs16: 15px;
-    --fs17: 16px;
-    --fs18: 17px;
-    --fs19: 18px;
-    --fs20: 19px;
-    --fs24: 22px;
+    /* --fs17: 15px; */
+    --fs20: 17px;
+    --fs24: 20px;
     --fs28: 26px;
     --fs31: 29px;
     --fs32: 30px;
     --fs40: 38px;
     --fs48: 45px;
     --fs68: 62px;
+    --fs69: 63px;
   }
 }
 

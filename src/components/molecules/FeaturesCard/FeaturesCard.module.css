@@ -1,0 +1,36 @@
+.featuresCard {
+  display: flex;
+  gap: var(--g-20);
+}
+.featuresCardImage {
+  width: 36px;
+  height: 36px;
+  position: relative;
+  border-radius: var(--br-3);
+  background-color: var(--blue-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline: var(--p-4);
+}
+.featuresCardImageIcon {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.featuresCardImageIcon img {
+  object-fit: contain;
+}
+.featuresCardContent P {
+    max-width: 76%;
+    line-height: var(--lh24);
+    font-size: 14.625px;
+    color: var(--grey-1100);
+}
+
+@media (max-width: 1400px) {
+    .featuresCardContent P {
+        max-width: 85%;
+    }
+}

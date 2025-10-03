@@ -1,0 +1,99 @@
+.mobileAppCard {
+    border-radius: 16px;
+    background: var(--blue-200);
+    padding: var(--p-16);
+    display: flex;
+    flex-direction: column;
+    gap: var(--g-16);
+    overflow: hidden;
+}
+.mobileAppCardImage {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.mobileAppCardHeaderButton {
+    display: flex;
+    gap: var(--g-10);
+}
+.badgeImage {
+    width: 100px;
+    height: 50px;
+    position: relative;
+    cursor: pointer;
+}
+
+.badgeImage img {
+ object-fit: contain;
+}
+.infoCardsImage{
+    height: 48px;
+    width: 48px;
+    position: relative;
+    border-radius: var(--br-10);
+    background-color: var(--blue-400);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: var(--p-4);
+}
+.infoCardsImageIcon{
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+.mobileAppCardHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.title{
+    line-height: var(--lh27);
+    font-family: var(--font-rethink);
+    color: var(--black);
+}
+.description{
+    line-height: var(--lh23);
+    font-family: var(--font-rethink);
+    color: var(--black);
+    max-width: 53%;
+}
+.mobileAppCardImage{
+    width: 554px;
+    height: 389px;
+    position: relative;
+    z-index: 1;
+}
+.mobileAppCardImage img {
+    object-fit: cover;
+    top: -80px !important;
+}
+
+.mobileAppCardImage::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url("/app-images/mobileapp-before.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 562px;
+    height: 446px;
+    position: absolute;
+    top: -88px;
+    right: -64px;
+    z-index: -1;
+  }
+@media (max-width: 1400px) {
+    .description {
+        max-width: 60%;
+    }
+    .mobileAppCardImage {
+        width: 481px;
+    }
+    .mobileAppCardImage::after {
+        width: 503px;
+        height: 452px;
+        top: -90px;
+        right: -46px;
+    }
+}

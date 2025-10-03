@@ -51,12 +51,6 @@
   font-family: var(--font-georgia);
 }
 
-.heroDescription {
-  line-height: var(--lh32);
-  text-align: center;
-  color: var(--grey-400);
-  font-family: var(--font-rethink);
-}
 .heroButtons {
   display: flex;
   gap: var(--g-16);
@@ -71,7 +65,7 @@
 }
 
 .heroImage {
-  height: 438px;
+  height: 462px;
   width: 250px;
   position: relative;
 }
@@ -96,4 +90,43 @@
 .heroImageContainer .heroImage:nth-child(3) img {
   position: absolute !important;
   top: 30px !important;
+}
+.heroText h1,
+.heroText p,
+.heroText h2,
+.heroText h3,
+.heroText h4,
+.heroText h5,
+.heroText h6 {
+  font-family: var(--font-georgia);
+  color: var(--white);
+  font-size: var(--fs69);
+  line-height: var(--lh69);
+  font-weight: 400;
+  text-align: center;
+}
+.heroDescription p,
+.heroDescription h1,
+.heroDescription h2,
+.heroDescription h3,
+.heroDescription h4,
+.heroDescription h5,
+.heroDescription h6 {
+  text-align: center;
+  color: var(--grey-400);
+  font-family: var(--font-rethink);
+  font-size: var(--fs24);
+  font-weight: 400;
+  line-height: var(--lh32);
+}
+
+@media (max-width: 1400px) {
+  .heroContent {
+    max-width: 48%;
+  }
+  .heroImage {
+    height: 400px;
+    width: 250px;
+    position: relative;
+  }
 }

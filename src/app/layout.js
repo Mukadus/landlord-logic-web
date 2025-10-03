@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import "./styles/globals.css";
 import WebsiteHeader from "@/components/organisms/WebsiteHeader";
 import localFont from "next/font/local";
+import Footer from "@/components/molecules/Footer";
 
 
 
@@ -59,6 +60,7 @@ export default function RootLayout({ children }) {
           {/* <SocketProvider> */}
           {children}
           {/* </SocketProvider> */}
+          <Footer />
         </CustomProvider>
       </body>
     </html>

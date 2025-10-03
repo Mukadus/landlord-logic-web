@@ -8,6 +8,11 @@ import HeroSection from "@/components/molecules/HeroSection";
 import Parser from "html-react-parser";
 import Image from "next/image";
 import FeaturesCard from "@/components/molecules/FeaturesCard";
+import InfoCards from "@/components/molecules/InfoCards";
+import clsx from "clsx";
+import MobileAppCard from "@/components/molecules/MobileAppCard";
+import MobileAppFeatures from "@/components/molecules/MobileAppFeatures";
+import FaqSection from "@/components/molecules/FaqSection";
 // import clsx from "clsx";
 
 export default function HomeTemplate() {
@@ -32,8 +37,12 @@ export default function HomeTemplate() {
             <Row className="gy-5">
               <Col lg={12}>
                 <div className={classes.sectionOneContent}>
-                  {Parser(data?.sectionOne?.htmlDescription)}
-                  {Parser(data?.sectionOne?.htmlDescription2)}
+                  <div className={classes.sectionOneTitle}>
+                    {Parser(data?.sectionOne?.htmlDescription)}
+                  </div>
+                  <div className={classes.sectionOneDescription}>
+                    {Parser(data?.sectionOne?.htmlDescription2)}
+                  </div>
                 </div>
               </Col>
               <Col lg={12}>
@@ -48,16 +57,109 @@ export default function HomeTemplate() {
                     </div>
                   </Col>
                   <Col lg={6}>
-                    {data?.sectionOne?.arr?.map((item, index) => (
-                      <FeaturesCard data={item} key={index} />
-                    ))}
+                    <div className={classes.sectionOneFeatures}>
+                      {data?.sectionOne?.arr?.map((item, index) => (
+                        <FeaturesCard data={item} key={index} />
+                      ))}
+                    </div>
                   </Col>
                 </Row>
               </Col>
             </Row>
           </div>
         )}
+
+        {data?.sectionTwo && (
+          <div className={classes.sectionTwo}>
+            <Row className="align-items-center justify-content-center">
+              {data?.sectionTwo?.arr?.map((item, index) => (
+                <Col lg={5} key={index}>
+                  <InfoCards data={item} />
+                </Col>
+              ))}
+            </Row>
+          </div>
+        )}
+
+        {data?.sectionThree && (
+          <div className={classes.sectionThree}>
+            <Row className="align-items-center justify-content-center">
+              <Col lg={12}>
+                <div className={classes.sectionThreeContent}>
+                  <h2 className={clsx(classes.sectionThreeTitle, "fs48 fw400")}>
+                    {data?.sectionThree?.title}
+                  </h2>
+                  <p
+                    className={clsx(
+                      classes.sectionThreeDescription,
+                      "fs17 fw400"
+                    )}
+                  >
+                    {data?.sectionThree?.description}
+                  </p>
+                </div>
+              </Col>
+            </Row>
+          </div>
+        )}
+        {data?.sectionFour && (
+          <div className={classes.sectionFour}>
+            <Row className="gy-5">
+              <Col lg={6}>
+                <MobileAppCard data={data?.sectionFour} />
+              </Col>
+              <Col lg={6}>
+                <Row className="gy-3">
+                  {data?.sectionFour?.arr?.map((item, index) => (
+                    <Col lg={6} key={index}>
+                      <MobileAppFeatures data={item} />
+                    </Col>
+                  ))}
+                </Row>
+              </Col>
+            </Row>
+          </div>
+        )}
       </Container>
+
+      {data?.sectionFive && (
+        <div className={classes.sectionFive}>
+          <Container>
+            <Row className="gy-5 justify-content-center align-items-center" >
+              <Col lg={10}>
+                <Row className={classes.sectionFiveRow}>
+                  <Col lg={12}>
+                    <div className={classes.sectionFiveContent}>
+                      <h2
+                        className={clsx(classes.sectionFiveTitle, "fs48 fw400")}
+                      >
+                        {data?.sectionFive?.title}
+                      </h2>
+                      <p
+                        className={clsx(
+                          classes.sectionFiveDescription,
+                          "fs17 fw400"
+                        )}
+                      >
+                        {data?.sectionFive?.description}
+                      </p>
+                    </div>
+                  </Col>
+                  <Col lg={12}>
+                    <Row className="gy-3">
+                      {data?.sectionFive?.faq?.map((item, index) => (
+                        <Col lg={6} key={index}>
+                          <FaqSection data={item} />
+                        </Col>
+                      ))}
+                    </Row>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
+          </Container>
+        </div>
+      )}
     </>
   );
 }

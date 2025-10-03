@@ -12,14 +12,11 @@ const HeroSection = ({ data }) => {
     <div className={classes.heroSection}>
       <div className={classes.heroContent}>
         <div className={classes.heroText}>
-          {/* <h1 className={clsx(classes.heroTitle, "fs68 fw400 white italic")}> */}
           {Parser(data?.htmlDescription)}
-          {/* </h1> */}
         </div>
-
-        <p className={clsx(classes.heroDescription, "fs20 fw400 white")}>
-          {data?.description}
-        </p>
+        <div className={classes.heroDescription}>
+          {Parser(data?.htmlDescription2)}
+        </div>
         <div className={classes.heroButtons}>
           <Button
             label="Get Started"

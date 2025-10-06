@@ -62,7 +62,7 @@
 }
 
 .emailInput::placeholder {
-  color: var(--rgba-white-60);
+  color: var(--white) !important;
 }
 .emailInputLeftIcon {
   left: 0 !important;

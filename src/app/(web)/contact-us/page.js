@@ -1,3 +1,6 @@
+import ContactUsTemplate from "@/components/Template/ContactUsTemplate";
+
+
 export default function ContactUsPage() {
-  return <div>Contact Us</div>;
+  return <ContactUsTemplate />;
 }

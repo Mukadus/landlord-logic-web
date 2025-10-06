@@ -13,6 +13,9 @@ import clsx from "clsx";
 import MobileAppCard from "@/components/molecules/MobileAppCard";
 import MobileAppFeatures from "@/components/molecules/MobileAppFeatures";
 import FaqSection from "@/components/molecules/FaqSection";
+import Button from "@/components/atoms/Button";
+import TimeLineSection from "@/components/molecules/TimeLineSection";
+import WaveBoxes from "@/components/molecules/WaveBoxes";
 // import clsx from "clsx";
 
 export default function HomeTemplate() {
@@ -99,6 +102,20 @@ export default function HomeTemplate() {
                   </p>
                 </div>
               </Col>
+              <Col lg={12}>
+                <div className={classes.timeLineSection}>
+                  <div className={classes.timeLineRow}>
+                    {data?.sectionThree?.arr?.map((item, index) => (
+                      <div className={clsx(classes.timeLineItem, classes[`item${index + 1}`])} key={index}>
+                        <WaveBoxes data={item} index={index}  />
+                      </div>
+                    ))}
+                  </div>
+                  <div className={classes.bg}>
+                    <Image src="/app-images/bg.png" alt="bg" fill />
+                  </div>
+                </div>
+              </Col>
             </Row>
           </div>
         )}
@@ -125,7 +142,7 @@ export default function HomeTemplate() {
       {data?.sectionFive && (
         <div className={classes.sectionFive}>
           <Container>
-            <Row className="gy-5 justify-content-center align-items-center" >
+            <Row className="gy-5 justify-content-center align-items-center">
               <Col lg={10}>
                 <Row className={classes.sectionFiveRow}>
                   <Col lg={12}>
@@ -153,6 +170,18 @@ export default function HomeTemplate() {
                         </Col>
                       ))}
                     </Row>
+                  </Col>
+                  <Col lg={12}>
+                    <div className={classes.sectionFiveDescription}>
+                      <div className={classes.sectionFiveDescriptionText}>
+                        {Parser(data?.sectionFive?.htmlDescription)}
+                      </div>
+                      <Button
+                        label="Try the App now"
+                        variant="primary"
+                        className={classes.sectionFiveButton}
+                      />
+                    </div>
                   </Col>
                 </Row>
               </Col>

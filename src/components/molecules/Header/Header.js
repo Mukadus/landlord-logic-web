@@ -5,8 +5,9 @@ import { Container } from "react-bootstrap";
 import Link from "next/link";
 import Button from "@/components/atoms/Button";
 import { NAV_DATA } from "@/developmentContext/app-data";
-
+import { useRouter } from "next/navigation";
 const Header = () => {
+  const router = useRouter();
   return (
     <header className={styles.header}>
       {/* Main Header */}
@@ -49,6 +50,9 @@ const Header = () => {
                 label="Contact us"
                 variant="outlined"
                 className={styles.contactBtn}
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
               />
             </div>
           </div>

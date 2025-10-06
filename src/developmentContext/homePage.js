@@ -72,24 +72,27 @@ export const homePage = {
   },
   sectionThree: {
     title: "We Are Aiming For Independent And Small Landlords",
-    description: "Enhance your expertise with AI, remove mundane tasks, and accelerate platform usability—while keeping you in complete control of your messaging strategy and execution.",
+    description:
+      "Enhance your expertise with AI, remove mundane tasks, and accelerate platform usability—while keeping you in complete control of your messaging strategy and execution.",
     arr: [
       {
-        icon: "/app-images/stats-icon3.png",
+        icon: "/app-images/item1.png",
         title: "Power your tenant with confidence: ",
-        description: "Use insights to fine-tune campaigns and maximize engagement.",
+        description:
+          "Use insights to fine-tune campaigns and maximize engagement.",
       },
       {
-        icon: "/app-images/stats-icon3.png",
+        icon: "/app-images/item2.png",
         title: "All properties on your first sight at dashboard: ",
-        description: "Use insights to fine-tune campaigns and maximize engagement",
+        description:
+          "Use insights to fine-tune campaigns and maximize engagement",
       },
       {
-        icon: "/app-images/stats-icon3.png",
+        icon: "/app-images/item3.png",
         title: "Track in one-unified space first sight at dashboard:",
-        description: " Use insights to fine-tune campaigns and maximize engagement.",
+        description:
+          " Use insights to fine-tune campaigns and maximize engagement.",
       },
-      
     ],
   },
   sectionFour: {
@@ -134,32 +137,44 @@ export const homePage = {
   sectionFive: {
     title: "Want to learn more?",
     description: "we have got you all covered",
+    htmlDescription: `
+    <h2>
+     Unleash the Full Potential of
+<i>Logic</i> for Your properties
+Today!
+    </h2>
+  `,
     faq: [
       {
         answer: "Landlord Management",
-        question: "Who is myLandlordLogic ideal for, and which property types benefit most?",
+        question:
+          "Who is myLandlordLogic ideal for, and which property types benefit most?",
       },
       {
         answer: "Landlord Management",
-        question: "What makes myLandlordLogic different from other property management platforms?",
+        question:
+          "What makes myLandlordLogic different from other property management platforms?",
       },
       {
         answer: "Landlord Management",
-        question: "Does myLandlordLogic offer integrations with existing accounting or CRM tools?",
+        question:
+          "Does myLandlordLogic offer integrations with existing accounting or CRM tools?",
       },
       {
         answer: "Landlord Management",
-        question: "How does myLandlordLogic ensure the security of my financial and tenant data?",
+        question:
+          "How does myLandlordLogic ensure the security of my financial and tenant data?",
       },
       {
         answer: "Landlord Management",
-        question: "Can I manage properties and tenants from both my phone and computer?",
+        question:
+          "Can I manage properties and tenants from both my phone and computer?",
       },
       {
         answer: "Landlord Management",
-        question: "What subscription plans are available, and what do they include?",
+        question:
+          "What subscription plans are available, and what do they include?",
       },
     ],
   },
-
 };

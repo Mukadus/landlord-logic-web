@@ -132,7 +132,7 @@ export default function AboutUsTemplate() {
                   </Col>
                   <Col lg={12}>
                     <div className={classes.sectionFiveDescription}>
-                      <div>{Parser(data?.sectionFive?.htmlDescription)}</div>
+                      <div className={classes.sectionFiveDescriptionText}>{Parser(data?.sectionFive?.htmlDescription)}</div>
                       <Button
                         label="Try the App now"
                         variant="primary"

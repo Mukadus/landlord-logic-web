@@ -1,0 +1,73 @@
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--p-16);
+  border-radius: 24px;
+  background: #e6f4eb;
+  padding: var(--p-24);
+  position: relative;
+  height: 100%;
+}
+
+.inputBox {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--g-16);
+}
+.inputClassName {
+  width: 100% !important;
+  background-color: transparent !important;
+}
+.title p,
+.title h1,
+.title h2,
+.title h3,
+.title h4,
+.title h5,
+.title h6 {
+  font-family: var(--font-georgia);
+  font-size: var(--fs48);
+  font-weight: 400;
+  line-height: var(--lh54);
+  color: var(--black);
+  max-width: 70%;
+}
+
+.description p {
+  color: rgba(0, 0, 0, 0.6);
+  font-family: var(--font-outfit);
+  font-size: var(--fs18);
+  font-weight: 400;
+  line-height: var(--lh24);
+}
+.title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/before-image.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 59px;
+  height: 300px;
+  position: absolute;
+  top: -53px;
+  right: 79px;
+}
+.title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  background-image: url("/app-images/single.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 21px;
+  height: 219px;
+  position: absolute;
+  top: -78px;
+  left: 4px;
+}
+.inputContainer , .inputClass {
+  width: 100% !important;
+}

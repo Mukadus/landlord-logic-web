@@ -4,42 +4,63 @@ import Image from "next/image";
 import { Container } from "react-bootstrap";
 import Link from "next/link";
 import Button from "@/components/atoms/Button";
-import { BiMenu, BiOutline } from "react-icons/bi";
+import { NAV_DATA } from "@/developmentContext/app-data";
+import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
 
 const Header = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
-      <Container className="container-fluid">
-        <div className={styles.headerContent}>
-          {/* Logo */}
-          <div className={styles.logo}>
-            <Image src="/app-images/logo.png" alt="logo" fill />
-          </div>
+      {/* Main Header */}
+      <div className={styles.mainHeader}>
+        <Container>
+          <div className={styles.headerContent}>
+            <div className={styles.logoIcon}>
+              <Image
+                src="/app-images/logo.png"
+                alt="MyLandlordLogic Logo"
+                fill
+              />
+            </div>
+            {/* Navigation Menu */}
+            <nav className={styles.nav}>
+              {NAV_DATA.map((item, index) => (
+                <Link
+                  key={index}
+                  href={item.path}
+                  className={clsx(styles.navLink, item?.path === pathname ? styles.active : "")}
+                >
+                  {item.title}
+                </Link>
+              ))}
+            </nav>
 
-          {/* Navigation Menu */}
-          <nav className={styles.nav}>
-            <Link href="#features" className={styles.navLink}>
-              Features
-            </Link>
-            <Link href="#learning" className={styles.navLink}>
-              Learning Hub
-            </Link>
-            <Link href="#leaderboard" className={styles.navLink}>
-              Leaderboard
-            </Link>
             {/* Action Buttons */}
             <div className={styles.actionButtons}>
-              <Button label="Sign In" variant="outlined" />
-              <Button label="Start Free Trial" variant="primary" />
+              {/* <Link href="/login" className={styles.signInLink}>
+                Sign in
+              </Link>
+              <Button
+                label="Signup"
+                variant="primary"
+                className={styles.signupBtn}
+              /> */}
+              <Button
+                label="Contact us"
+                variant="outlined"
+                className={styles.contactBtn}
+                onClick={() => {
+                  router.push("/contact-us");
+                }}
+              />
             </div>
-          </nav>
-
-          {/* Mobile menu button */}
-          <button type="button" className={styles.mobileMenuButton}>
-            <BiMenu size={30} />
-          </button>
-        </div>
-      </Container>
+          </div>
+        </Container>
+      </div>
     </header>
   );
 };

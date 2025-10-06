@@ -1,0 +1,85 @@
+.accordion {
+  border-radius: 28px !important;
+  border: 1px solid var(--black) !important;
+  background: var(--grey-100) !important;
+  box-shadow: none !important;
+  margin-bottom: 16px;
+  overflow: hidden !important;
+}
+
+.accordion:before {
+  display: none !important;
+}
+
+.accordionSummary {
+  padding: 10px 20px !important;
+  min-height: auto !important;
+  border-radius: 28px !important;
+  background: var(--grey-100) !important;
+  height: 73px !important;
+}
+
+.accordionSummary:hover {
+  background: var(--grey-100) !important;
+}
+
+.accordionSummary:focus {
+  background: var(--grey-100) !important;
+}
+
+.accordionSummary.Mui-expanded {
+  border-radius: 28px 28px 0 0 !important;
+  background: var(--grey-100) !important;
+}
+
+.questionText {
+  color: var(--grey-1200);
+  font-family: var(--font-rethink) !important;
+  font-size: var(--fs14) !important;
+  font-weight: 400 !important;
+  line-height: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.expandIcon {
+  color: var(--grey-1200);
+  transition: transform 0.3s ease;
+}
+
+.expandIcon.expanded {
+  transform: rotate(90deg);
+}
+
+.accordionDetails {
+  padding: 0 20px 20px 20px !important;
+  border-radius: 0 0 28px 28px !important;
+  background: var(--grey-100) !important;
+}
+
+.answerText {
+  color: var(--grey-1200);
+  font-family: var(--font-rethink) !important;
+  font-size: 14px;
+  font-weight: 400 !important;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Override Material-UI default styles */
+.accordion .MuiAccordion-root {
+  border-radius: 28px !important;
+}
+
+.accordion .MuiAccordionSummary-root {
+  border-radius: 28px !important;
+}
+
+.accordion .MuiAccordionSummary-root.Mui-expanded {
+  border-radius: 28px 28px 0 0 !important;
+}
+
+.accordion .MuiAccordionDetails-root {
+  border-radius: 0 0 28px 28px !important;
+}
+

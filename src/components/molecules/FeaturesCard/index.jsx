@@ -5,7 +5,7 @@ import { imageUrl } from '@/resources/utils/helper'
 import clsx from 'clsx'
 
 
-const FeaturesCard = ({data}) => {
+const FeaturesCard = ({data , contentClass}) => {
   return (
     <div>
         <div className={classes.featuresCard}>
@@ -16,7 +16,7 @@ const FeaturesCard = ({data}) => {
             </div>
             <div className={classes.featuresCardContent}>
                 <h3 className={clsx(classes.featuresCardTitle, 'fs20 fw600')}>{data?.title}</h3>
-                <p className={clsx(classes.featuresCardDescription, 'fs14 fw500')}>{data?.description}</p>
+                <p className={clsx(classes.featuresCardDescription, 'fs14 fw500' , contentClass)}>{data?.description}</p>
             </div>
         </div>
     </div>

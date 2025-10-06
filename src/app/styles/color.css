@@ -51,4 +51,7 @@
   --rgba-black-60: rgba(0, 0, 0, 0.6);
   --rgba-black-40: rgba(0, 0, 0, 0.4);
   --rgba-black-10: rgba(0, 0, 0, 0.1);
+  --rgba-yellow-30: rgba(255, 191, 0, 0.3);
+  --rgba-yellow-40: rgba(255, 191, 0, 0.4);
+  --rgba-grey-300: rgba(20, 77, 82, 0.50);
 }

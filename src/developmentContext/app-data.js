@@ -13,7 +13,10 @@ export const NAV_DATA = [
   },
 ];
 export const FOOTER_DATA = {
+  htmlDescription: `<h2>Ready to achieve <i>Logic?</i></h2>`,
+  text:"Enjoy exceptional customer service as we guide you seamlessly through your property journey",
   logo: "/app-images/logo.png",
+  image: "/app-images/contact-image.png",
   description:
     "A modern Landlords platform powered by Logic that changes how Landlords facilitate tenants.",
   links: [
@@ -49,24 +52,34 @@ export const FOOTER_DATA = {
         {
           title: "X",
           path: "#",
-          icon: "x",
+          icon: "/app-images/twitter.png",
         },
         {
           title: "Facebook",
           path: "#",
-          icon: "facebook",
-        },
+            icon: "/app-images/fb.png",
+          },
         {
           title: "Instagram",
           path: "#",
-          icon: "instagram",
+          icon: "/app-images/instagram.png",
         },
         {
           title: "LinkedIn",
           path: "#",
-          icon: "linkedin",
+          icon: "/app-images/linkedin.png",
         },
       ],
+    },
+  ],
+  legalLinks: [
+    {
+      title: "Terms",
+      path: "/terms",
+    },
+    {
+      title: "Privacy",
+      path: "/privacy",
     },
   ],
 };

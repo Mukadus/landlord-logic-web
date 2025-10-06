@@ -1,0 +1,128 @@
+.heroSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: var(--g-16);
+  }
+  
+  .heroContent {
+    max-width: 74%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--g-16);
+    position: relative;
+  }
+  .heroText {
+    padding-top: 59px;
+    /* text-align: center; */
+  }
+  .heroText::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url("/app-images/before-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 57px;
+    height: 305px;
+    position: absolute;
+    top: -12px;
+    right: 157px;
+  }
+  .heroText::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-image: url("/app-images/after-image.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 67px;
+    height: 299px;
+    position: absolute;
+    top: -106px;
+    left: 279px;
+  }
+  .heroTitle {
+    line-height: var(--lh69);
+    font-family: var(--font-georgia);
+  }
+  
+  .heroButtons {
+    display: flex;
+    gap: var(--g-16);
+    justify-content: center;
+  }
+  .heroGetStartedButton,
+  .heroButton {
+    border-radius: var(--br-7) !important;
+  }
+  .heroButton {
+    border: 1px solid var(--grey-200) !important;
+  }
+  
+  .heroImage {
+    height: 392px;
+    width:100%;
+    position: relative;
+  }
+  .heroImage img {
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+  .heroText h1,
+  .heroText p,
+  .heroText h2,
+  .heroText h3,
+  .heroText h4,
+  .heroText h5,
+  .heroText h6 {
+    font-family: var(--font-georgia);
+    color: var(--white);
+    font-size: var(--fs69);
+    line-height: var(--lh69);
+    font-weight: 400;
+  }
+  .heroDescription p,
+  .heroDescription h1,
+  .heroDescription h2,
+  .heroDescription h3,
+  .heroDescription h4,
+  .heroDescription h5,
+  .heroDescription h6 {
+    color: var(--grey-400);
+    font-family: var(--font-rethink);
+    font-size: var(--fs16);
+    font-weight: 400;
+    line-height: var(--lh32);
+    max-width: 68%;
+    margin-left: auto;
+
+  }
+  
+  @media (max-width: 1400px) {
+    .heroDescription p,
+    .heroDescription h1,
+    .heroDescription h2,
+    .heroDescription h3,
+    .heroDescription h4,
+    .heroDescription h5,
+    .heroDescription h6 {
+      max-width: 80%;
+      margin-left: auto;
+  
+    }
+
+    .heroText h1,
+    .heroText p,
+    .heroText h2,
+    .heroText h3,
+    .heroText h4,
+    .heroText h5,
+    .heroText h6 {
+      font-size: 60px !important;
+    }
+  }

@@ -6,8 +6,11 @@ import Button from "@/components/atoms/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { imageUrl } from "@/resources/utils/helper";
 import Parser from "html-react-parser";
+import { useRouter } from "next/navigation";
 
 const HeroSection = ({ data }) => {
+  const router = useRouter();
+
   return (
     <div className={classes.heroSection}>
       <div className={classes.heroContent}>
@@ -22,12 +25,18 @@ const HeroSection = ({ data }) => {
             label="Get Started"
             variant="primary"
             className={classes.heroGetStartedButton}
+            onClick={() => {
+              router.push("/about-us");
+            }}
           />
           <Button
-            label="Explore Features"
+            label="Explore Pricing"
             variant="outlined"
             className={classes.heroButton}
             rightIcon={<FaArrowRightLong />}
+            onClick={() => {
+              router.push("/pricing");
+            }}
           />
         </div>
       </div>

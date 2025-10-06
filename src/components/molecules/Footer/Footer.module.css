@@ -68,17 +68,17 @@
   left: 0 !important;
 }
 .emailSubmitButton {
-  background: var(--yellow);
-  border: none;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border-radius: 100px;
-  padding: var(--p-12);
-  transition: all 0.3s ease;
-  color: var(--dark-blue-100);
-  height: 40px;
-  width: 40px;
+  background: var(--yellow) !important;
+  border: none !important;
+  align-items: center !important;
+  justify-content: center !important;
+  cursor: pointer !important;
+  border-radius: 100px !important;
+  padding: var(--p-12) !important;
+  transition: all 0.3s ease !important;
+  color: var(--dark-blue-100) !important;
+  height: 40px !important;
+  width: 40px !important;
 }
 
 .emailSubmitButton:hover {

@@ -87,6 +87,12 @@
     padding: var(--p-24);
     position: relative;
   }
+
+  @media (max-width: 1400px) {
+    .contactFormImageContent {
+      width: 465px;
+    }
+  }
   @media (max-width: 768px) {
     .contactInfoBlock {
       flex-direction: column;

@@ -64,19 +64,19 @@ export const aboutUsPage = {
       "Enhance your expertise with AI, remove mundane tasks, and accelerate platform usability—while keeping you in complete control of your messaging strategy and execution.",
     arr: [
       {
-        icon: "/app-images/stats-icon3.png",
+        icon: "/app-images/item1.png",
         title: "Power your tenant with confidence: ",
         description:
           "Use insights to fine-tune campaigns and maximize engagement.",
       },
-      {
-        icon: "/app-images/stats-icon3.png",
+    {
+        icon: "/app-images/item2.png",
         title: "All properties on your first sight at dashboard: ",
         description:
           "Use insights to fine-tune campaigns and maximize engagement",
       },
       {
-        icon: "/app-images/stats-icon3.png",
+        icon: "/app-images/item3.png",
         title: "Track in one-unified space first sight at dashboard:",
         description:
           " Use insights to fine-tune campaigns and maximize engagement.",

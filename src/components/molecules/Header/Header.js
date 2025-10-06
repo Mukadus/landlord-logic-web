@@ -6,8 +6,13 @@ import Link from "next/link";
 import Button from "@/components/atoms/Button";
 import { NAV_DATA } from "@/developmentContext/app-data";
 import { useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import clsx from "clsx";
+
 const Header = () => {
   const router = useRouter();
+  const pathname = usePathname();
+  
   return (
     <header className={styles.header}>
       {/* Main Header */}
@@ -27,9 +32,7 @@ const Header = () => {
                 <Link
                   key={index}
                   href={item.path}
-                  className={`${styles.navLink} ${
-                    index === 0 ? styles.active : ""
-                  }`}
+                  className={clsx(styles.navLink, item?.path === pathname ? styles.active : "")}
                 >
                   {item.title}
                 </Link>

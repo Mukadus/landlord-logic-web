@@ -9,7 +9,7 @@ import Parser from "html-react-parser";
 const PlatformSection = ({ data }) => {
   return (
     <div className={classes.infoCards}>
-      <div class={classes.infoCardsContainer}>
+      <div className={classes.infoCardsContainer}>
         <div className={classes.infoImage}>
           <Image
             src={imageUrl(data?.image) || data?.image}

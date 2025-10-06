@@ -106,8 +106,14 @@ export default function HomeTemplate() {
                 <div className={classes.timeLineSection}>
                   <div className={classes.timeLineRow}>
                     {data?.sectionThree?.arr?.map((item, index) => (
-                      <div className={clsx(classes.timeLineItem, classes[`item${index + 1}`])} key={index}>
-                        <WaveBoxes data={item} index={index}  />
+                      <div
+                        className={clsx(
+                          classes.timeLineItem,
+                          classes[`item${index + 1}`]
+                        )}
+                        key={index}
+                      >
+                        <WaveBoxes data={item} index={index} />
                       </div>
                     ))}
                   </div>

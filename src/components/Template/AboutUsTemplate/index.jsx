@@ -15,6 +15,7 @@ import FaqSection from "@/components/molecules/FaqSection";
 import AboutHeroSection from "@/components/molecules/AboutHeroSection";
 import PlatformSection from "@/components/molecules/PlatformSection";
 import Button from "@/components/atoms/Button";
+import WaveBoxes from "@/components/molecules/WaveBoxes";
 // import clsx from "clsx";
 
 export default function AboutUsTemplate() {
@@ -91,6 +92,26 @@ export default function AboutUsTemplate() {
                   >
                     {data?.sectionThree?.description}
                   </p>
+                </div>
+              </Col>
+              <Col lg={12}>
+                <div className={classes.timeLineSection}>
+                  <div className={classes.timeLineRow}>
+                    {data?.sectionThree?.arr?.map((item, index) => (
+                      <div
+                        className={clsx(
+                          classes.timeLineItem,
+                          classes[`item${index + 1}`]
+                        )}
+                        key={index}
+                      >
+                        <WaveBoxes data={item} index={index} />
+                      </div>
+                    ))}
+                  </div>
+                  <div className={classes.bg}>
+                    <Image src="/app-images/bg.png" alt="bg" fill />
+                  </div>
                 </div>
               </Col>
             </Row>

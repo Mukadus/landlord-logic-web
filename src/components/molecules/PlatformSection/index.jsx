@@ -5,8 +5,10 @@ import { imageUrl } from "@/resources/utils/helper";
 import clsx from "clsx";
 import Button from "@/components/atoms/Button";
 import Parser from "html-react-parser";
+import { useRouter } from "next/navigation";
 
 const PlatformSection = ({ data }) => {
+  const router = useRouter();
   return (
     <div className={classes.infoCards}>
       <div className={classes.infoCardsContainer}>
@@ -41,6 +43,9 @@ const PlatformSection = ({ data }) => {
           label="Get Started"
           variant="primary"
           className={classes.infoCardsButton}
+          onClick={() => {
+            router.push("/pricing");
+          }}
         />
       </div>
     </div>

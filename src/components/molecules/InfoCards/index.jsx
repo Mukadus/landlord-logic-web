@@ -4,8 +4,10 @@ import Image from "next/image";
 import { imageUrl } from "@/resources/utils/helper";
 import clsx from "clsx";
 import Button from "@/components/atoms/Button";
+import { useRouter } from "next/navigation";
 
 const InfoCards = ({ data }) => {
+  const router = useRouter();
   return (
     <div className={classes.infoCards}>
       <div className={classes.infoCardsHeader}>
@@ -22,6 +24,9 @@ const InfoCards = ({ data }) => {
           label="Get Started"
           variant="primary"
           className={classes.infoCardsButton}
+          onClick={() => {
+            router.push("/pricing");
+          }}
         />
       </div>
       <div className={classes.infoCardsContent}>

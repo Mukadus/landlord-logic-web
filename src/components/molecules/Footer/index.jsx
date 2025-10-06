@@ -34,7 +34,7 @@ export default function Footer() {
               </p>
             </div>
             <div className={styles.footerImage}>
-              <Link href="/contact-us" target="_blank">
+              <Link href="/contact-us">
                 <Image
                   src={imageUrl(FOOTER_DATA?.image) || FOOTER_DATA?.image}
                   alt="Contact Us"

@@ -12,7 +12,7 @@ import clsx from "clsx";
 const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
-  
+
   return (
     <header className={styles.header}>
       {/* Main Header */}
@@ -41,14 +41,14 @@ const Header = () => {
 
             {/* Action Buttons */}
             <div className={styles.actionButtons}>
-              <Link href="/login" className={styles.signInLink}>
+              {/* <Link href="/login" className={styles.signInLink}>
                 Sign in
               </Link>
               <Button
                 label="Signup"
                 variant="primary"
                 className={styles.signupBtn}
-              />
+              /> */}
               <Button
                 label="Contact us"
                 variant="outlined"

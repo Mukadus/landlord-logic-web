@@ -201,6 +201,17 @@ span {
   }
 }
 
+@media (max-width: 1200px) {
+  :root {
+    --fs14: 12px;
+    --fs15: 13px;
+    --fs16: 14px;
+    --fs17: 15px;
+    --fs18: 16px;
+    --fs69: 56px;
+  }
+}
+
 /* For max-width: 992px */
 @media (max-width: 992px) {
   :root {
@@ -238,6 +249,7 @@ span {
     --fs40: 32px;
     --fs48: 38px;
     --fs68: 52px;
+    --fs69: 48px;
   }
 }
 

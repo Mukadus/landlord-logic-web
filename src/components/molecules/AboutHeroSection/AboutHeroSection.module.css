@@ -30,6 +30,7 @@
     position: absolute;
     top: -12px;
     right: 157px;
+    animation: blink 2s infinite;
   }
   .heroText::after {
     content: "";
@@ -44,6 +45,7 @@
     position: absolute;
     top: -106px;
     left: 279px;
+    animation: blink 2s infinite;
   }
   .heroTitle {
     line-height: var(--lh69);
@@ -124,5 +126,14 @@
     .heroText h5,
     .heroText h6 {
       font-size: 60px !important;
+    }
+  }
+
+  @keyframes blink {
+    0%, 50% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0.3;
     }
   }

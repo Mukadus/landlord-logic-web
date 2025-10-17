@@ -82,6 +82,7 @@
     top: -88px;
     right: -64px;
     z-index: -1;
+    animation: blink 2s infinite;
   }
 @media (max-width: 1400px) {
     .description {
@@ -95,5 +96,14 @@
         height: 452px;
         top: -90px;
         right: -46px;
+    }
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0.3;
     }
 }

@@ -36,6 +36,7 @@
   position: absolute;
   top: 28px;
   right: 56px;
+  animation: blink 2s infinite;
 }
 .sectionOneImage::after {
   content: "";
@@ -50,6 +51,7 @@
   position: absolute;
   top: -94px;
   left: 38px;
+  animation: blink 2s infinite;
 }
 .sectionOneTitle p,
 .sectionOneTitle h1,
@@ -233,5 +235,14 @@ height: 300px;
   }
   .item3{
     right:4px;
+  }
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0.3;
   }
 }

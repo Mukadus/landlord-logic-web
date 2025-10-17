@@ -50,7 +50,7 @@ export default function HomeTemplate() {
               </Col>
               <Col lg={12}>
                 <Row>
-                  <Col lg={6}>
+                  <Col md={6}>
                     <div className={classes.sectionOneImage}>
                       <Image
                         src={data?.sectionOne?.image}
@@ -59,7 +59,7 @@ export default function HomeTemplate() {
                       />
                     </div>
                   </Col>
-                  <Col lg={6}>
+                  <Col md={6}>
                     <div className={classes.sectionOneFeatures}>
                       {data?.sectionOne?.arr?.map((item, index) => (
                         <FeaturesCard data={item} key={index} />

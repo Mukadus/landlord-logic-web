@@ -13,10 +13,12 @@
   gap: var(--g-16);
   position: relative;
 }
+
 .heroText {
   padding-top: 59px;
   text-align: center;
 }
+
 .heroText::before {
   content: "";
   position: absolute;
@@ -33,6 +35,7 @@
   transition: all 0.3s ease-in-out;
   animation: blink 2s infinite;
 }
+
 .heroText::after {
   content: "";
   position: absolute;
@@ -49,6 +52,7 @@
   transition: all 0.3s ease-in-out;
   animation: blink 2s infinite;
 }
+
 .heroTitle {
   line-height: var(--lh69);
   text-align: center;
@@ -60,10 +64,12 @@
   gap: var(--g-16);
   justify-content: center;
 }
+
 .heroGetStartedButton,
 .heroButton {
   border-radius: var(--br-7) !important;
 }
+
 .heroButton {
   border: 1px solid var(--grey-200) !important;
 }
@@ -73,14 +79,17 @@
   width: 250px;
   position: relative;
 }
+
 .heroImage img {
   object-fit: fill;
 }
+
 .heroImageContainer {
   display: flex;
   gap: var(--g-16);
   justify-content: center;
 }
+
 .heroImageContainer .heroImage:nth-child(1) img {
   position: absolute !important;
   top: 100px !important;
@@ -95,6 +104,7 @@
   position: absolute !important;
   top: 30px !important;
 }
+
 .heroText h1,
 .heroText p,
 .heroText h2,
@@ -109,6 +119,7 @@
   font-weight: 400;
   text-align: center;
 }
+
 .heroDescription p,
 .heroDescription h1,
 .heroDescription h2,
@@ -128,75 +139,102 @@
   .heroContent {
     max-width: 48%;
   }
+
   .heroImage {
     width: 239px;
     height: 405px;
     position: relative;
   }
-  .heroText{
+
+  .heroText {
     padding-top: 30px;
   }
 }
 
 @media (max-width: 991px) {
-  .heroContent{
+  .heroContent {
     max-width: 71%;
   }
-  .heroText::before{
+
+  .heroText::before {
     top: -48px;
     right: -45px;
 
   }
-  .heroText::after{
+
+  .heroText::after {
     top: -110px;
     left: -70px;
   }
 }
-  @media (max-width: 800px) {
-   .heroImage{
+
+@media (max-width: 800px) {
+  .heroImage {
     width: 178px;
     height: 358px;
-   }
   }
+}
 
 @media (max-width: 767px) {
-  .heroContent{
+  .heroContent {
     max-width: 100%;
   }
-  .heroText::before{
+
+  .heroText::before {
     top: -70px;
     right: -6px;
   }
-  .heroText::after{
+
+  .heroText::after {
     top: -110px;
     left: -25px;
   }
 }
 
 @media (max-width: 600px) {
-  .heroText:after{
+  .heroText:after {
     width: 53px;
     height: 290px;
     top: -118px;
     left: 3px;
   }
-  .heroImage{
+
+  .heroImage {
     width: 162px;
     height: 312px;
   }
 }
 
+@media (max-width: 500px) {
+  .heroImage {
+    width: 140px;
+    height: 289px;
+  }
+}
+
 @media (max-width: 480px) {
-  .heroImage{
-    /* display: none; */
+  .heroImage {
+    width: 113px;
+    height: 257px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroImage {
+    width: 89px;
+    height: 210px;
   }
 }
 
 @keyframes blink {
-  0%, 50% {
+
+  0%,
+  50% {
     opacity: 1;
   }
-  25%, 75% {
+
+  25%,
+  75% {
     opacity: 0.3;
   }
 }

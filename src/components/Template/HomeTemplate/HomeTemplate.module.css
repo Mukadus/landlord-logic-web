@@ -238,6 +238,49 @@ height: 300px;
   }
 }
 
+@media (max-width: 1200px) {
+  .sectionOneImage {
+    width: 508px;
+    height: 396px;
+  }
+  .sectionOneImage::before {
+    top: 59px;
+    right: 62px;
+    width: 52px;
+    height: 297px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sectionOneImage {
+    width: 318px;
+    height: 347px;
+  }
+  .sectionOneImage::before {
+   right: 0;
+  }
+  .sectionOneImage::after {
+    width: 87px;
+    height: 276px;
+    left: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionOneContent{
+    max-width: 100%;
+  }
+  .sectionOneImage{
+    width: 100%;
+    height: 300px;
+  }
+  .sectionOneImage::before {
+    right: 100px;
+   }
+   .sectionOneImage::after {
+    left: 100px;
+   }
+}
 @keyframes blink {
   0%, 50% {
     opacity: 1;

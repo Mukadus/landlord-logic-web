@@ -229,6 +229,14 @@ span {
     --fs40: 36px;
     --fs48: 42px;
     --fs68: 58px;
+
+    --lh24: 22px;
+    --lh28: 26px;
+    --lh32: 28px;
+    --lh41: 38px;
+    --lh54: 42px;
+    --lh60: 54px;
+    --lh69: 58px;
   }
 }
 
@@ -247,7 +255,7 @@ span {
     --fs31: 25px;
     --fs32: 26px;
     --fs40: 32px;
-    --fs48: 38px;
+    --fs48: 35px;
     --fs68: 52px;
     --fs69: 48px;
   }
@@ -268,8 +276,26 @@ span {
     --fs31: 23px;
     --fs32: 24px;
     --fs40: 28px;
-    --fs48: 34px;
+    --fs48: 30px;
     --fs68: 46px;
+    --fs69: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --fs24: 16px;
+    --fs69: 36px;
+  }
+}
+
+@media (max-width: 400px) {
+  :root {
+    --fs24: 14px;
+    --fs69: 32px;
+
+
+  --lh32: 25px;
   }
 }
 

@@ -36,7 +36,9 @@
 }
 
 .container textarea:focus {
-  border: 1px solid var( --grey-1000);
+  /* border: 1px solid var( --grey-1000); */
+  outline: none;
+  box-shadow: none;
 }
 
 .error {

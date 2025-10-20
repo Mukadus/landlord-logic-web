@@ -31,8 +31,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--g-20);
-  width:100%;
-  max-width:700px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .infoCardsTitle {
@@ -62,22 +62,53 @@
   font-family: var(--font-rethink);
   margin: 0;
 }
+
 .infoImage {
-    width: 420px;
-    height: 392px;
+  width: 420px;
+  height: 392px;
   position: absolute;
   top: -58px;
   /* right: 0; */
 }
+
 .infoImage img {
   object-fit: cover;
   border-radius: var(--br-12);
 }
+
 @media (max-width: 1400px) {
   .infoCardsDescription {
     max-width: 100%;
   }
+
   .infoCardsContent {
-    max-width:563px ;
+    max-width: 563px;
+  }
 }
+
+@media (max-width: 1200px) {
+  .infoImage {
+    width: 275px;
+    height: 391px;
+    top: -49px;
+  }
+}
+@media (max-width: 991px) {
+  .infoImage {
+    width: 300px;
+    height: 287px;
+    top: 0;
+    position: relative;
+  }
+}
+@media (max-width: 767px) {
+  .infoImage {
+    width: 100%;
+    height: 300px;
+    position: relative;
+  }
+  .infoCards {
+    flex-direction: column;
+    padding: 20px;
+  }
 }

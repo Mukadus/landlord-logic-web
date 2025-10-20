@@ -51,7 +51,7 @@ export default function AboutUsTemplate() {
               <Col lg={12}>
                 <Row className={clsx("gy-4", classes.sectionOneFeaturesRow)}>
                   {data?.sectionOne?.arr?.map((item, index) => (
-                    <Col lg={4} key={index}>
+                    <Col lg={4} md={6} key={index}>
                       <FeaturesCard
                         data={item}
                         key={index}
@@ -145,7 +145,7 @@ export default function AboutUsTemplate() {
                   <Col lg={12}>
                     <Row className="gy-3">
                       {data?.sectionFive?.faq?.map((item, index) => (
-                        <Col lg={6} key={index}>
+                        <Col md={6} key={index}>
                           <FaqSection data={item} />
                         </Col>
                       ))}

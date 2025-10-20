@@ -40,3 +40,9 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 480px) {
+  .featuresCardContent P {
+    font-size: 13px;
+  }
+}

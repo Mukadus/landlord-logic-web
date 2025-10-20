@@ -8,21 +8,23 @@
 /* Boxes container */
 .boxesContainer {
   position: relative;
-  z-index: 10;
+  /* z-index: 10; */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
 }
-.boxDiv{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;    
-    margin-inline-end: 5px;
+
+.boxDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-inline-end: 5px;
 }
+
 .waveBox {
-    width: 100%;
+  width: 100%;
   position: relative;
   border-radius: 28px;
   border: 1px solid #000;
@@ -40,9 +42,9 @@
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.connectionLine{
-    background-color: #555555;
-    width: 1px;
+.connectionLine {
+  background-color: #555555;
+  width: 1px;
 }
 
 .boxIcon {
@@ -63,27 +65,29 @@
 }
 
 .boxTitle {
-    color: #0B373C;
-    font-family: var(--font-rethink);
-    font-size: var(--fs14);
-    font-weight: 700;
+  color: #0B373C;
+  font-family: var(--font-rethink);
+  font-size: var(--fs14);
+  font-weight: 700;
 }
 
 .boxDescription {
-    color: rgba(15, 56, 61, 0.90);
-    font-family: var(--font-rethink);
-    font-size: var(--fs14);
-    font-weight: 500;
+  color: rgba(15, 56, 61, 0.90);
+  font-family: var(--font-rethink);
+  font-size: var(--fs14);
+  font-weight: 500;
 }
 
-.line1{
-    height: 190px;
+.line1 {
+  height: 190px;
 }
-.line2{
-    height: 163px;
+
+.line2 {
+  height: 163px;
 }
-.line3{
-    height: 188px;
+
+.line3 {
+  height: 188px;
 }
 
 
@@ -91,12 +95,15 @@
   display: flex;
   gap: 8px;
 }
+
 /* Wave animation */
 @keyframes wave {
+
   0%,
   100% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10px);
   }
@@ -105,26 +112,31 @@
 /* Responsive design */
 
 @media (max-width: 1400px) {
-    .waveBox {
-        max-width: 275px;
-    }
-    .line1{
-        height: 154px;
-    }
-    .line2{
-        height: 142px;
-    }
-    .line3{
-        height: 165px;
-    }
+  .waveBox {
+    max-width: 275px;
+  }
+
+  .line1 {
+    height: 154px;
+  }
+
+  .line2 {
+    height: 142px;
+  }
+
+  .line3 {
+    height: 165px;
+  }
 }
+
 @media (max-width: 1200px) {
   .boxesContainer {
     max-width: 1000px;
   }
 
   .waveBox {
-    width: 280px;
+    width: 250px;
+    padding: 17px;
   }
 }
 
@@ -140,22 +152,77 @@
     max-width: 400px;
   }
 
-  .connectionLine {
+  /* .connectionLine {
     display: none;
+  } */
+
+  /* .waveBackground {
+    display: none;
+  } */
+}
+
+@media screen and (max-width:1024px) {
+  .waveBox {
+    width: 258px;
+    padding: 12px;
   }
 
-  .waveBackground {
-    display: none;
+  .line2 {
+    height: 110px;
+  }
+
+}
+
+@media screen and (max-width:991px) {
+  .waveBox {
+    width: 208px;
+  }
+
+  .boxIcon {
+    height: 29px;
+    width: 29px;
+  }
+
+  .line1 {
+    height: 155px;
+  }
+
+  .line2 {
+    height: 58px
+  }
+
+}
+
+@media screen and (max-width:800px) {
+  .waveBox {
+    width: 246px;
+    padding: 12px 13px;
+  }
+
+  .line1 {
+    height: 200px
+  }
+
+  .line2 {
+    height: 70px;
+  }
+
+  .line3 {
+    height: 170px;
   }
 }
 
-@media (max-width: 768px) {
-  .waveBoxesContainer {
-    padding: 40px 0;
+@media (max-width: 767px) {
+  .waveBox {
+    max-width: 100%;
+    width: 100%;
+    padding: 24px;
   }
 
-  .waveBox {
-    padding: 20px;
+  .line3,
+  .line2,
+  .line1 {
+    height: 0;
   }
 
   .boxIcon {
@@ -170,4 +237,11 @@
   .boxDescription {
     font-size: 13px;
   }
+}
+
+@media screen and (max-width:375px) {
+  .waveBox {
+    padding: 24px 14px;
+  }
+
 }

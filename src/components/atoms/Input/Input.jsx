@@ -114,7 +114,7 @@ export default function Input({
           )}
         </div>
         {error && (
-          <p className={`mt-1 ${[classes.error].join(" ")}`}>*{error}</p>
+          <p className={mergeClass("errorText", classes.error)}>*{error}</p>
         )}
       </div>
     </>

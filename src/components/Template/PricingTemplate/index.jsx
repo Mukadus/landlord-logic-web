@@ -22,9 +22,9 @@ export default function PricingTemplate() {
             </div>
           </Col>
           <Col lg={12}>
-            <Row>
+            <Row className="gy-5 justify-content-center">
               {data?.arr?.map((item, index) => (
-                <Col lg={4} key={index}>
+                <Col lg={4} md={6} key={index}>
                   <PricingCards data={item} key={index} />
                 </Col>
               ))}

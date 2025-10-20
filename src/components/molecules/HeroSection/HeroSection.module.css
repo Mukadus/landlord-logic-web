@@ -226,6 +226,20 @@
   }
 }
 
+
+@media screen and (max-width: 360px) {
+  .heroText::before {
+    top: -52px;
+    right: 13px;
+    width: 29px;
+    height: 282px;
+  }
+  .heroText::after {
+    top: -118px;
+    left: -6px;
+  }
+}
+
 @keyframes blink {
 
   0%,

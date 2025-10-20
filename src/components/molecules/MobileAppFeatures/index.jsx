@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { imageUrl } from '@/resources/utils/helper'
 
 const MobileAppFeatures = ({data}) => {
-  console.log(data)
   return (
     <div className={classes.mobileAppFeatures} style={{backgroundColor: data?.backgroundColor}}>
         <div className={classes.mobileAppFeaturesImage}>

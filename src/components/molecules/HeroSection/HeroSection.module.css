@@ -13,10 +13,12 @@
   gap: var(--g-16);
   position: relative;
 }
+
 .heroText {
   padding-top: 59px;
   text-align: center;
 }
+
 .heroText::before {
   content: "";
   position: absolute;
@@ -30,7 +32,10 @@
   position: absolute;
   top: 9px;
   right: 56px;
+  transition: all 0.3s ease-in-out;
+  animation: blink 2s infinite;
 }
+
 .heroText::after {
   content: "";
   position: absolute;
@@ -44,7 +49,10 @@
   position: absolute;
   top: -94px;
   left: 15px;
+  transition: all 0.3s ease-in-out;
+  animation: blink 2s infinite;
 }
+
 .heroTitle {
   line-height: var(--lh69);
   text-align: center;
@@ -56,10 +64,12 @@
   gap: var(--g-16);
   justify-content: center;
 }
+
 .heroGetStartedButton,
 .heroButton {
   border-radius: var(--br-7) !important;
 }
+
 .heroButton {
   border: 1px solid var(--grey-200) !important;
 }
@@ -69,14 +79,17 @@
   width: 250px;
   position: relative;
 }
+
 .heroImage img {
   object-fit: fill;
 }
+
 .heroImageContainer {
   display: flex;
   gap: var(--g-16);
   justify-content: center;
 }
+
 .heroImageContainer .heroImage:nth-child(1) img {
   position: absolute !important;
   top: 100px !important;
@@ -91,6 +104,7 @@
   position: absolute !important;
   top: 30px !important;
 }
+
 .heroText h1,
 .heroText p,
 .heroText h2,
@@ -105,6 +119,7 @@
   font-weight: 400;
   text-align: center;
 }
+
 .heroDescription p,
 .heroDescription h1,
 .heroDescription h2,
@@ -124,9 +139,116 @@
   .heroContent {
     max-width: 48%;
   }
+
   .heroImage {
-    height: 400px;
-    width: 250px;
+    width: 239px;
+    height: 405px;
     position: relative;
+  }
+
+  .heroText {
+    padding-top: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .heroContent {
+    max-width: 71%;
+  }
+
+  .heroText::before {
+    top: -48px;
+    right: -45px;
+
+  }
+
+  .heroText::after {
+    top: -110px;
+    left: -70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .heroImage {
+    width: 178px;
+    height: 358px;
+  }
+}
+
+@media (max-width: 767px) {
+  .heroContent {
+    max-width: 100%;
+  }
+
+  .heroText::before {
+    top: -70px;
+    right: -6px;
+  }
+
+  .heroText::after {
+    top: -110px;
+    left: -25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .heroText:after {
+    width: 53px;
+    height: 290px;
+    top: -118px;
+    left: 3px;
+  }
+
+  .heroImage {
+    width: 162px;
+    height: 312px;
+  }
+}
+
+@media (max-width: 500px) {
+  .heroImage {
+    width: 140px;
+    height: 289px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroImage {
+    width: 113px;
+    height: 257px;
+  }
+}
+
+@media (max-width: 400px) {
+  .heroImage {
+    width: 89px;
+    height: 210px;
+  }
+}
+
+
+@media screen and (max-width: 360px) {
+  .heroText::before {
+    top: -52px;
+    right: 13px;
+    width: 29px;
+    height: 282px;
+  }
+  .heroText::after {
+    top: -118px;
+    left: -6px;
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  25%,
+  75% {
+    opacity: 0.3;
   }
 }

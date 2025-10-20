@@ -19,7 +19,9 @@ const Header = () => {
       <div className={styles.mainHeader}>
         <Container>
           <div className={styles.headerContent}>
-            <div className={styles.logoIcon}>
+            <div className={styles.logoIcon} onClick={() => {
+              router.push("/");
+            }}>
               <Image
                 src="/app-images/logo.png"
                 alt="MyLandlordLogic Logo"
@@ -31,10 +33,10 @@ const Header = () => {
               {NAV_DATA.map((item, index) => (
                 <Link
                   key={index}
-                  href={item.path}
+                  href={item?.path}
                   className={clsx(styles.navLink, item?.path === pathname ? styles.active : "")}
                 >
-                  {item.title}
+                  {item?.title}
                 </Link>
               ))}
             </nav>

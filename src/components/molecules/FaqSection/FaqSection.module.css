@@ -7,6 +7,7 @@
   overflow: hidden !important;
 }
 
+
 .accordion:before {
   display: none !important;
 }
@@ -17,15 +18,20 @@
   border-radius: 28px !important;
   background: var(--grey-100) !important;
   height: 73px !important;
+  transition: all 0.3s ease-in-out !important;
 }
-
+s
 .accordionSummary:hover {
-  background: var(--grey-100) !important;
+  background: rgb(230, 244, 235) !important;
+  border-radius: 28px 28px 0 0 !important;
+}
+.accordionSummary:focus {
+  background: rgb(230, 244, 235) !important;
+  border-radius: 28px 28px 0 0 !important;
 }
 
-.accordionSummary:focus {
-  background: var(--grey-100) !important;
-}
+
+
 
 .accordionSummary.Mui-expanded {
   border-radius: 28px 28px 0 0 !important;

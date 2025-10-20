@@ -23,6 +23,7 @@
   width: 200px;
   height: 70px;
   position: relative;
+  cursor: pointer;
 }
 
 .logoIcon img {

@@ -34,3 +34,15 @@
         max-width: 85%;
     }
 }
+
+@media (max-width: 991px) {
+    .featuresCardContent P {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+  .featuresCardContent P {
+    font-size: 13px;
+  }
+}

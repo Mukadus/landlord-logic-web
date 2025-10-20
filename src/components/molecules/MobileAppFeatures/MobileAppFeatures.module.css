@@ -8,22 +8,99 @@
   height: 100%;
   justify-content: space-between;
   min-height: 276px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+  opacity: 1;
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.mobileAppFeatures:hover {
+  transform: translateY(-8px);
+
 }
 .mobileAppFeaturesImage {
   width: 40px;
   height: 40px;
   position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: scaleIn 0.8s ease-out 0.2s both;
+}
+
+.mobileAppFeatures:hover .mobileAppFeaturesImage {
+  transform: scale(1.1) rotate(5deg);
 }
 .mobileAppFeaturesImage img {
   object-fit: contain;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+.mobileAppFeaturesContent {
+  animation: slideInUp 0.8s ease-out 0.4s both;
+}
+
 .title{
     line-height: var(--lh27);
     font-family: var(--font-rethink);
     color: var(--black);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.mobileAppFeatures:hover .title {
+    transform: translateX(4px);
+}
+
 .description{
     line-height: var(--lh23);
     font-family: var(--font-rethink);
     color: var(--grey-600);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobileAppFeatures:hover .description {
+    transform: translateX(4px);
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1200px) {
+  .mobileAppFeatures {
+    padding: var(--p-32) var(--p-16);
+  }
+}
+@media screen and (max-width:767px){
+  .mobileAppFeatures{
+    min-height: 180px;
+  }
+  
 }

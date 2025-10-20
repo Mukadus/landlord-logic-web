@@ -1,17 +1,5 @@
-export const loginFormValues = {
+export const contactFormValues = {
+  name: "",
   email: "",
-  password: "",
-};
-
-export const signUpFormValues = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  password: "",
-};
-
-export const updatePasswordValues = {
-  currentPassword: "",
-  password: "",
-  confirmPassword: "",
+  message: "",
 };

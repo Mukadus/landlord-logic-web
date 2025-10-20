@@ -2,14 +2,17 @@ export const NAV_DATA = [
   {
     title: "Homepage",
     path: "/",
+    icon: "/app-images/home.png",
   },
   {
     title: "About Us",
     path: "/about-us",
+    icon: "/app-images/about-us.png",
   },
   {
     title: "Pricing",
     path: "/pricing",
+    icon: "/app-images/pricing.png",
   },
 ];
 export const FOOTER_DATA = {

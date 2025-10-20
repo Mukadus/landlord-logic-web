@@ -6,15 +6,27 @@ import contactUsPage, { contactForm } from "@/developmentContext/contactUsPage";
 import { useState } from "react";
 import Image from "next/image";
 import { imageUrl } from "@/resources/utils/helper";
+import { useFormik } from "formik";
+import { contactFormValues } from "@/formik/initialValues";
+import { ContactFormSchema } from "@/formik/schema";
 
 export default function ContactUsTemplate() {
   const [data, setData] = useState(contactUsPage);
+
+  
+  const contactForms = useFormik({
+    initialValues: contactFormValues,
+    validationSchema: ContactFormSchema,
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
   return (
     <main className={classes.contactUsTemplate}>
       <Container>
         <Row>
           <Col md={6}>
-            <ContactForm data={data} />
+            <ContactForm data={data} form={contactForms} />
           </Col>
 
           <Col md={6}>

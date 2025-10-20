@@ -16,6 +16,7 @@
     position:relative;
     height:372px;
     width:300px;
+    margin: 0 auto;
 }
 .contactFormImageContent img{
     object-fit:cover;
@@ -92,6 +93,25 @@
     .contactFormImageContent {
       width: 465px;
     }
+  }
+  @media (max-width: 1200px) {
+    .containerBox {
+      padding: var(--p-24) 0;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .contactFormImageContent{
+      width: 276px;
+    }
+    .contactInfoBlock{
+      flex-direction: column;
+    }
+    .contactInfoItem{
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+   
   }
   @media (max-width: 768px) {
     .contactInfoBlock {

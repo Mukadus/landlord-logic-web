@@ -1,7 +1,8 @@
 import { emailRegex } from "@/resources/utils/regex";
 import * as Yup from "yup";
 
-export const LoginSchema = Yup.object({
+export const ContactFormSchema = Yup.object({
+  name: Yup.string().required("Name is required"),
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required")
@@ -10,5 +11,5 @@ export const LoginSchema = Yup.object({
       "Email contains invalid characters",
       (value) => !value || emailRegex.test(value)
     ),
-  password: Yup.string().required("Password is required"),
+  message: Yup.string().required("Message is required"),
 });

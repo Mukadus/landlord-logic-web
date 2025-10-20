@@ -29,3 +29,19 @@
 .pricingRow {
     row-gap: 80px;
 }
+
+@media (max-width: 991px) {
+    .pricingRow {
+        row-gap: 40px;
+    }
+}
+@media (max-width: 767px) {
+    .pricingDescription  p{
+        max-width: 90%;
+    }
+}
+@media (max-width: 576px) {
+    .pricingRow {
+        row-gap: 30px;
+    }
+}

@@ -50,7 +50,7 @@ export default function HomeTemplate() {
               </Col>
               <Col lg={12}>
                 <Row>
-                  <Col lg={6}>
+                  <Col md={6}>
                     <div className={classes.sectionOneImage}>
                       <Image
                         src={data?.sectionOne?.image}
@@ -59,7 +59,7 @@ export default function HomeTemplate() {
                       />
                     </div>
                   </Col>
-                  <Col lg={6}>
+                  <Col md={6}>
                     <div className={classes.sectionOneFeatures}>
                       {data?.sectionOne?.arr?.map((item, index) => (
                         <FeaturesCard data={item} key={index} />
@@ -74,9 +74,9 @@ export default function HomeTemplate() {
 
         {data?.sectionTwo && (
           <div className={classes.sectionTwo}>
-            <Row className="align-items-center justify-content-center">
+            <Row className="gy-5 justify-content-center">
               {data?.sectionTwo?.arr?.map((item, index) => (
-                <Col lg={5} key={index}>
+                <Col lg={5} sm={6} key={index}>
                   <InfoCards data={item} />
                 </Col>
               ))}
@@ -128,13 +128,13 @@ export default function HomeTemplate() {
         {data?.sectionFour && (
           <div className={classes.sectionFour}>
             <Row className="gy-5">
-              <Col lg={6}>
+              <Col lg={6} sm={12}>
                 <MobileAppCard data={data?.sectionFour} />
               </Col>
-              <Col lg={6}>
+              <Col lg={6} md={12}>
                 <Row className="gy-3">
                   {data?.sectionFour?.arr?.map((item, index) => (
-                    <Col lg={6} key={index}>
+                    <Col md={6} key={index}>
                       <MobileAppFeatures data={item} />
                     </Col>
                   ))}
@@ -171,7 +171,7 @@ export default function HomeTemplate() {
                   <Col lg={12}>
                     <Row className="gy-3">
                       {data?.sectionFive?.faq?.map((item, index) => (
-                        <Col lg={6} key={index}>
+                        <Col md={6} key={index}>
                           <FaqSection data={item} />
                         </Col>
                       ))}
